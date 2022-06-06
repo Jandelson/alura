@@ -1,0 +1,28 @@
+<html>
+    <script>
+        async function fetchText() {
+            var formData = new FormData();
+            formData.append('email', 'teste@maestro.com.br');
+            formData.append('password', 'jandelson1212');
+            
+            let response = await fetch('http://localhost:8008/api/login', {
+                method: 'POST',
+                mode: 'cors',
+                cache: 'no-cache',
+                body: formData
+            });
+
+            console.log(response.status); // 200
+            console.log(response.statusText); // OK
+
+            if (response.status === 200) {
+                let data = await response.text();
+                console.log(data);
+                // handle data
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function(e) {
+            fetchText();
+        });
+    </script>
+</html>
