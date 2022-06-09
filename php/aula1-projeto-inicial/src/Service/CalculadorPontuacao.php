@@ -17,4 +17,4 @@ class CalculadorPontuacao
             throw new \DomainException('Apenas Cursos e videos Alura+ possuem pontuações');
         }
     }
-}
+}   
