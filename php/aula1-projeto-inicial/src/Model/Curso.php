@@ -2,7 +2,7 @@
 
 namespace Alura\Solid\Model;
 
-class Curso
+class Curso implements Pontuavel, Assistivel
 {
     private $nome;
     private $videos;
@@ -33,5 +33,17 @@ class Curso
     public function recuperarVideos(): array
     {
         return $this->videos;
+    }
+
+    public function recuperaPontuacao(): int
+    {
+        return 100;
+    }
+
+    public function assistir(): void
+    {
+        foreach ($this->recuperarVideos() as $video) {
+            $video->assistir();
+        }
     }
 }
