@@ -1,7 +1,13 @@
 <?php declare(strict_types=1);
 
-function recebeDesconto(int $descontoInicial, bool $ehPremium, int $quantidade, int $anosCliente): void
-{
+function recebeDesconto(
+    int $descontoInicial, 
+    bool $ehPremium, 
+    int $quantidade, 
+    int $anosCliente
+): void {
+    
+    $desconto = $descontoInicial;
 
     if ($descontoInicial > 200) {
         return;
@@ -21,6 +27,7 @@ function recebeDesconto(int $descontoInicial, bool $ehPremium, int $quantidade, 
 
     echo <<<EOF
 --------------------
+inicial: $desconto
 Desconto: $descontoInicial
 --------------------
 EOF;
