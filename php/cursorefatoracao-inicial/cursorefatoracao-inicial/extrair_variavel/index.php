@@ -2,7 +2,15 @@
 
 function verificaSeEmailEhValido(): string
 {
-    return filter_var($_GET['email'], FILTER_VALIDATE_EMAIL) ? "O seu e-mail é: " . $_GET['email'] : "O seu e-mail não é válido";
+    $mail = $_GET['email'];
+    $mensagem = '';
+    $mensagemErro = '';
+    
+    if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        return $mensagem;
+    } else {
+        return $mensagemErro;
+    }
 }
 
 echo verificaSeEmailEhValido();
