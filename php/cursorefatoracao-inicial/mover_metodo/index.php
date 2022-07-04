@@ -8,4 +8,4 @@ require 'Correntista.php';
 $correntista = new Correntista("Giovanni", "Tempobono");
 $contaCorrente = new ContaCorrente($correntista);
 
-echo $contaCorrente->exibeNomeCorrentista();
+echo $contaCorrente->exibeNomeCorrentista() . PHP_EOL;

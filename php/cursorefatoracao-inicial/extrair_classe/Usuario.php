@@ -1,16 +1,17 @@
 <?php declare(strict_types=1);
 
-namespace Alura\MoverMetodo;
+namespace Alura\ExtrairClasse;
 
-class Correntista
+class Usuario
 {
     private $nome;
     private $sobrenome;
 
-    public function __construct(string $nome, string $sobrenome)
+    public function __construct(string $nome, string $sobrenome, Contato $contato)
     {
         $this->nome = $nome;
         $this->sobrenome = $sobrenome;
+        $this->contato = $contato;
     }
 
     public function getNome(): string
@@ -21,5 +22,10 @@ class Correntista
     public function getSobrenome(): string
     {
         return $this->sobrenome;
+    }
+
+    public function getTelefoneDdd(): string
+    {
+        return $this->contato->getTelefoneDdd();
     }
 }
