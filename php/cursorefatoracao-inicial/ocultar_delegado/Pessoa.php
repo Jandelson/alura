@@ -15,4 +15,9 @@ class Pessoa
     {
         return $this->departamento;
     }
+
+    public function getNomeGerente(): string
+    {
+        return $this->getDepartamento()->getGerente()->getNome();
+    }
 }
