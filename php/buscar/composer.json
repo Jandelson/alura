@@ -42,5 +42,7 @@
     },
     "scripts-descriptions": {
         "check": "Analisa padrão de código e execução de testes"
-    }
+    },
+    "license": "GPL-3.0",
+    "bin": ["get.php"]
 }
