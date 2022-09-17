@@ -2,6 +2,9 @@
     "name": "jandelson/buscar",
     "type": "library",
     "autoload": {
+        "files": [
+            "functions.php"
+        ],
         "psr-4": {
             "Jandelson\\Buscar\\": "src/"
         }
